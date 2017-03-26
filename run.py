@@ -62,7 +62,8 @@ def submitpassporttochain():
         'postman-token': "30fbfd63-775c-5e33-f11b-a325985e7471"
         }
     response = requests.request("POST", url, data=payload, headers=headers)
-    print(response.text)
+    print(response)
+    return response.text
 
 app.debug=True
 app.run()
